@@ -1,0 +1,54 @@
+#header{
+    border: 2px;
+    border-style: solid;
+    border-color: red;
+    background-color: #060638;
+    height: 100px;
+}
+#nav{
+    border-bottom: solid #060638 20px;
+    border-top: solid #060638 20px;
+    background-color: white;
+    height: 230px;
+    width: 200px;
+    float: left;
+}
+#contentinner{
+    border-bottom:solid 2px;
+    border-top: solid 2px;
+    border-color: red;
+    background-color: white;
+    height: 450px;
+    width: 1300px;
+     float: right;
+}
+#footer{
+    border: 2px;
+    border-style: solid;
+    border-color: red;
+    background-color: #060638;
+    height: 100px;
+}
+#inserttop{
+    border: 2px;
+    height: 20px;
+    border-color: white;
+    background-color: white;
+}
+#hidebordertop{
+    border-bottom: solid red 2px;
+    border-top: solid red 2px;
+    float: left;
+    width: 200px;
+    height: 450px;
+ }   
+ #clearfooter{
+ border: solid white 2px;
+ background-color: white;
+ height: 20px;
+
+ }
+ 
+ #po{
+    border: solid  rgb(84, 80, 80) 2px;
+ }
