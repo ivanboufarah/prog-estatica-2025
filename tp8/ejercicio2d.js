@@ -1,0 +1,1 @@
+document.write("El browser no tiene habilitada la ejecucion de codigo javascript");
