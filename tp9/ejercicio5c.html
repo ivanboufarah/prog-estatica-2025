@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ej5c</title>
+</head>
+<body>
+  <h1>Operaciones</h1>
+<button onclick="calculo('pesadola')">peso a dolar</button>
+  <button onclick="calculo('dolaapes')">dolar a peso</button>
+  <button onclick="calculo('pesareal')">peso a reales</button>
+  <button onclick="calculo('realapes')">reales a peso</button>
+  <button onclick="calculo('pesaeur')">peso a euro</button>
+  <button onclick="calculo('eurapes')">euro a peso</button>
+
+  <h2>Resultados</h2>
+  <textarea id="popi" rows="10" cols="40"></textarea>
+
+  <script>
+    function calculo(ope) {
+      let x = parseFloat(prompt("Ingrese la cantidad de dinero"));
+      let res;
+      switch (ope) {
+        case 'pesadola':
+          res = x * 0.00068;
+          break;
+        case 'dolaapes':
+          res = x * 1466;
+          break;
+        case 'pesareal':
+          res = x * 0.0036;
+          break;
+        case 'realapes':
+          res = x * 275;
+          break;
+           case 'pesaeur':
+          res = x * 0.00058;
+          break;
+           case 'eurapes':
+          res = x * 1724;
+          break;
+        default:
+          res = 'Operación no válida';
+      }
+      document.getElementById("popi").value += `Resultado de ${ope}: ${res}\n`;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Ejercicio 8c</title>
+        <script type="text/javascript">
+            let navegador = navigator.appName;
+            if (navegador == "Microsoft Internet Explorer") {
+                window.location.replace("http://www.microsoft.com/ie");
+            }
+            else if (navegador == "Netscape") {
+                window.location.replace("http://www.mozilla.com/firefox/");
+            }
+            else if (navegador == "Konqueror") {
+                window.location.replace("http://konqueror.org");
+            }
+            else {
+                document.write("Browser desconocido");
+            }
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

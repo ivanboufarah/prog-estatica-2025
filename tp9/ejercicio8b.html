@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>Ejercicio 8b</title>
+        <script type="text/javascript">
+            function toggle(idProv, idCiudades) {
+                let provincia = document.getElementById(idProv);
+                let ciudades = document.getElementById(idCiudades);
+
+                if (ciudades.style.display == "none") {
+                    ciudades.style.display = "block";
+                    provincia.style.textDecoration = "none";
+                }
+                else {
+                    ciudades.style.display = "none";
+                    provincia.style.textDecoration = "underline";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h2>Provincias y Ciudades</h2>
+        <ul>
+            <li>
+                <span id="p1" onclick="toggle('p1','c1')">Neuquén -</span>
+                <ul id="c1">
+                    <li>Neuquén</li>
+                    <li>Zapala</li>
+                    <li>San Martin</li>
+                    <li>Junin</li>
+                </ul>
+            </li>
+            <li>
+                <span id="p2" onclick="toggle('p2','c2')">Río Negro -</span>
+                <ul id="c2">
+                    <li>Cipolletti</li>
+                    <li>Fernandez Oro</li>
+                    <li>Roca</li>
+                    <li>Cinco Saltos</li>
+                    <li>Allen</li>
+                </ul>
+            </li>
+            <li>
+                <span id="p3" onclick="toggle('p3','c3')">Buenos Aires -</span>
+                <ul id="c3">
+                    <li>La Plata</li>
+                    <li>Mar del Plata</li>
+                    <li>Necochea</li>
+                </ul>
+            </li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,17 @@
+<html>
+<head>
+    <title>Ejercicio 7c</title>
+</head>
+<body>
+    <h2>Primeros 100 números de f(x) = 3 * x + 5 - x²</h2>
+    <div id="funcion"></div>
+    <script type="text/javascript">
+        var resultado = "";
+        for (var x=0;x<100;x++) {
+            var fx=3*x+5-(x * x);
+            resultado+=fx+" ";
+        }
+        document.getElementById("funcion").innerHTML = resultado;
+    </script>
+</body>
+</html>

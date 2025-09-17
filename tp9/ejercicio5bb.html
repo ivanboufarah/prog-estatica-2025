@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ej5b</title>
+</head>
+<body>
+  <h1>Operaciones</h1>
+  <button onclick="calculo('suma')">Suma</button>
+  <button onclick="calculo('res')">Restar</button>
+  <button onclick="calculo('mul')">Multiplicación</button>
+  <button onclick="calculo('divi')">División</button>
+
+  <h2>Resultados</h2>
+  <textarea id="popi" rows="10" cols="40"></textarea>
+
+  <script>
+    function calculo(ope) {
+      let x = parseFloat(prompt("Ingrese el número x"));
+      let y = parseFloat(prompt("Ingrese el número y"));
+      let res;
+      switch (ope) {
+        case 'suma':
+          res = x + y;
+          break;
+        case 'res':
+          res = x - y;
+          break;
+        case 'mul':
+          res = x * y;
+          break;
+        case 'divi':
+          res = x / y;
+          break;
+        default:
+          res = 'Operación no válida';
+      }
+      document.getElementById("popi").value += `Resultado de ${ope}: ${res}\n`;
+    }
+  </script>
+</body>
+</html>
