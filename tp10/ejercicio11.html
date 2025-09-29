@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Fecha y Cuenta Regresiva</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    h1 {
+      color: darkgreen;
+    }
+    #fechaHora, #navidad {
+      font-size: 20px;
+      margin: 15px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Fecha y Hora Actual</h1>
+  <div id="fechaHora"></div>
+
+  <h1>ejercicio 11a</h1>
+  <div id="navidad"></div>
+
+  <script>
+    function actualizar() {
+      let ahora = new Date();
+
+      let dia = ahora.getDate();
+      let mes = ahora.getMonth() + 1; 
+      let anio = ahora.getFullYear();
+
+      let horas = ahora.getHours();
+      let minutos = ahora.getMinutes();
+      let segundos = ahora.getSeconds();
+
+      if (dia < 10) dia = "0" + dia;
+      if (mes < 10) mes = "0" + mes;
+      if (minutos < 10) minutos = "0" + minutos;
+      if (segundos < 10) segundos = "0" + segundos;
+
+      document.getElementById("fechaHora").textContent =
+        dia + "/" + mes + "/" + anio + " " + horas + ":" + minutos + ":" + segundos;
+      let navidad = new Date(anio, 11, 25, 0, 0, 0);
+      if (ahora > navidad) {
+        navidad = new Date(anio + 1, 11, 25, 0, 0, 0);
+      }
+
+      let diferencia = navidad - ahora; 
+
+      let dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+      let horasRest = Math.floor((diferencia / (1000 * 60 * 60)) % 24);
+      let minsRest = Math.floor((diferencia / (1000 * 60)) % 60);
+      let segsRest = Math.floor((diferencia / 1000) % 60);
+
+      document.getElementById("navidad").textContent =
+        dias + " días, " + horasRest + " horas, " + minsRest + " minutos y " + segsRest + " segundos";
+    }
+    actualizar();
+    setInterval(actualizar, 1000);
+  </script>
+</body>
+</html>

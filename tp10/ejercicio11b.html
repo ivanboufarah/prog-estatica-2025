@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>ejercicio 11b</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    #resultado {
+      margin-top: 20px;
+      font-size: 20px;
+      color: darkblue;
+    }
+  </style>
+</head>
+<body>
+  <h1>Calculadora de Edad</h1>
+  <button onclick="calcularEdad()">Calcular Edad</button>
+  <div id="resultado"></div>
+
+  <script>
+    function calcularEdad() {
+      let anioNacimiento = parseInt(prompt("Ingrese su año de nacimiento:"));
+      let anioActual = new Date().getFullYear();
+
+      if (isNaN(anioNacimiento) || anioNacimiento > anioActual) {
+        document.getElementById("resultado").textContent = "Por favor ingrese un año válido.";
+      } else {
+        let edad = anioActual - anioNacimiento;
+        document.getElementById("resultado").textContent = "Su edad es " + edad;
+      }
+    }
+  </script>
+</body>
+</html>

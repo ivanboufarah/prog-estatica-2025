@@ -1,0 +1,25 @@
+<html>
+<head>
+  <title>Ejercicio 9 - String</title>
+  <script type="text/javascript">
+    function procesar() {
+      var mensaje=prompt("Ingrese un mensaje:");
+      document.write("Mayúsculas: " + mensaje.toUpperCase() + "<br>");
+      document.write("Minúsculas: " + mensaje.toLowerCase() + "<br>");
+      document.write("Subcadena (pos 5, largo 10): " + mensaje.substr(5,10) + "<br>");
+      if (mensaje.indexOf("hola") != -1) {
+        document.write("hola que tal<br>");
+      }
+      document.write("Sin espacios: " + mensaje.replace(/ /g,"") + "<br>");
+      document.write("Sin 'hola': " + mensaje.replace("hola","") + "<br>");
+
+      var traducido = mensaje.replace("my","mi");
+      traducido = traducido.replace("hello","hola");
+      traducido = traducido.replace("name","nombre");
+      document.write("Traducido: " + traducido + "<br>");
+    }
+  </script>
+</head>
+<body onload="procesar()">
+</body>
+</html>
